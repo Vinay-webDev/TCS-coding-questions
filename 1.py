@@ -14,13 +14,24 @@ class Solution:
                 arr_count[arr[i]] = 1
             else:
                 arr_count[arr[i]] += 1
-        res = 0
         for j in range(N):
             if arr_count[arr[j]] == 1:
                 return arr[j]
 sol = Solution()
 print(sol.nonRepeating(arr1))   #2
 print(sol.nonRepeating(arr2))   #6
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+class Solution:
+    def nonRepeating2(self, arr):
+        from collections import Counter
+        arr_count = Counter(arr)
+        N = len(arr)
+        for i in range(N):
+            if arr_count[arr[i]] == 1:
+                return arr[i]
+sol = Solution()
+print(sol.nonRepeating2(arr1))  #2
+print(sol.nonRepeating2(arr2))  #6
 
 
 
