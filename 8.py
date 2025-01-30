@@ -14,16 +14,31 @@ class Solution:
 # print(sol.palindrome(s2)) #racecar is a palindrome
 # print(sol.palindrome(s3)) #malayalam is a palindrome
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-s1 = "hello"
-s2 = "racecar"
-s3 = "malayalam"
+
 class Solution:
     def palindrome2(self, s):
         if s == "".join(reversed(s)):
             return s + " is a palindrome"
         else:
             return s + " is not a palindrome"
+# sol = Solution()
+# print(sol.palindrome2(s1)) #hello is not a palindrome
+# print(sol.palindrome2(s2)) #racecar is a palindrome
+# print(sol.palindrome2(s3)) #malayalam is a palindrome
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+s1 = "hello"
+s2 = "racecar"
+s3 = "malayalam"
+class Solution:
+    def palindorme3(self, s):
+        l, r = 0, len(s) - 1
+        while l < r:
+            if s[l] != s[r]:
+                return s + " is not a palindrome"
+            l += 1
+            r -= 1
+        return s + " is a palindrome"
 sol = Solution()
-print(sol.palindrome2(s1)) #hello is not a palindrome
-print(sol.palindrome2(s2)) #racecar is a palindrome
-print(sol.palindrome2(s3)) #malayalam is a palindrome
+print(sol.palindorme3(s1)) #hello is not a palindrome
+print(sol.palindorme3(s2)) #racecar is a palindrome
+print(sol.palindorme3(s3)) #malayalam is a palindrome
